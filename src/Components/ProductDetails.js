@@ -9,7 +9,10 @@ function ProductDetails(){
     return(
         <>
             <h1>This is Details Page for product number {num.id}</h1>
-            <p>{pro.price}</p>
+            <p>Title : {pro.title}</p>
+            <p> Price : ${pro.price}</p>
+            <p>Description : {pro.description}</p>
+            <img style={{width:"250px"}} src={pro.image}></img>
         </>
     )
 }

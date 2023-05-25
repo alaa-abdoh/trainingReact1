@@ -12,9 +12,9 @@ function Pro (props){
 
     return(
         <div className="product">
-            <h1>{props.title}</h1>
-            <p>{props.description}</p>
-            <p>this product includes in : <span  style={{"fontSize":"30px","color":"red"}}>{props.category}</span></p>
+            <h3>{props.title}</h3>
+            <p> <span style={{color:"black", fontWeight:"bold"}}>Description :</span> {props.description}</p>
+            <p>this product includes in : <span  style={{"fontSize":"22px","color":"red"}}>{props.category}</span></p>
             <span>the price of this product is {props.price}</span>
             <Link to={`product/${props.id}`}>Details</Link>
          </div>

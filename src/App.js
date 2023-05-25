@@ -1,6 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
-import Warning from "./Components/Welcome"
+import Home from "./Components/Welcome"
 import Button from "./Components/Classcomp"
 import { useState } from 'react';
 import ProductDetails from "./Components/ProductDetails"
@@ -14,7 +14,7 @@ function App() {
       <Header/>
       
         <Routes>
-          <Route path="/" element={<Warning/>}  />
+          <Route path="/" element={<Home/>}  />
           <Route path="xxx" element={<About/>}  />
           <Route path="product/:id" element={<ProductDetails/>}  />
         </Routes>
