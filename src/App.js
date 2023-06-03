@@ -1,8 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 import Home from "./Components/Welcome"
-import Button from "./Components/Classcomp"
-import { useState } from 'react';
+import WrongPath from "./Components/WrongPath"
 import ProductDetails from "./Components/ProductDetails"
 import Header from "./Components/Header"
 import About from './Components/About';
@@ -17,6 +16,7 @@ function App() {
           <Route path="/" element={<Home/>}  />
           <Route path="xxx" element={<About/>}  />
           <Route path="product/:id" element={<ProductDetails/>}  />
+          <Route path="*" element={<WrongPath/>}/>
         </Routes>
 
     </>

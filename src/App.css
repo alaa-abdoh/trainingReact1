@@ -60,4 +60,29 @@ button:hover{
   border-radius: 8px;
   text-decoration: none;
 }
+.notFound img{
+  width: 500px;
+  display: block;
+  margin: 0 auto;
+}
+.notFound .text{
+  margin: 50px 0;
+  text-align: center;
+}
+.notFound .text a{
+  display: inline-block;
+  margin: 10px 0;
+  text-decoration: none;
+  background-color: #0075ff;
+  color: white;
+  padding: 8px;
+  border-radius: 10px;
+  transition: all 0.3s;
+}
+.notFound .text a:hover{
+  background-color:#0075ffad ;
+}
+
+
+
 
