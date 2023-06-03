@@ -6,7 +6,7 @@ function Header(props){
             <Link to="/">logo</Link>
             <ul>
                 <Link to="/">Home</Link>
-                <Link to="/xxx">About</Link>
+                <a href="#about">About</a>
             </ul>
         </div>
     )

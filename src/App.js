@@ -1,10 +1,10 @@
 import logo from './logo.svg';
 import './App.css';
-import Home from "./Components/Welcome"
+import Products from "./Components/Welcome"
 import WrongPath from "./Components/WrongPath"
 import ProductDetails from "./Components/ProductDetails"
 import Header from "./Components/Header"
-import About from './Components/About';
+import Introduction from './Components/Introduction';
 import { Route, Routes } from 'react-router-dom';
 function App() { 
  
@@ -13,14 +13,14 @@ function App() {
       <Header/>
       
         <Routes>
-          <Route path="/" element={<Home/>}  />
-          <Route path="xxx" element={<About/>}  />
+          <Route path="/" element={<Introduction/>}  />
+          <Route path="pro" element={<Products/>}/>
           <Route path="product/:id" element={<ProductDetails/>}  />
           <Route path="*" element={<WrongPath/>}/>
         </Routes>
 
     </>
-    // <Test/>
+
     
   )
      
