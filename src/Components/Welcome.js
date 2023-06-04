@@ -1,5 +1,3 @@
-
-
 import React, { useEffect, useState } from "react"
 import Pro from "..//Components//Classcomp"
 
@@ -26,15 +24,17 @@ function Products (props){
    return(
         <>
         <div className="content">
-            <div className="Buttons">
-              <button onClick={()=>{setState("All")}}>All</button>
-              <button onClick={()=>{setState("jewelery")}}>jewelery</button>
-              <button onClick={()=>{setState("electronics")}}>electronics</button>
-              <button onClick={()=>{setState("women's clothing")}}>women's clothing</button>
-              <button onClick={()=>{setState("men's clothing")}}>men's clothing</button>
-            </div>
-            <div className="products">
-              {prepare(type)}
+            <div className="container">
+              <div className="Buttons">
+                <button onClick={()=>{setState("All")}}>All Categories</button>
+                <button onClick={()=>{setState("jewelery")}}>jewelery</button>
+                <button onClick={()=>{setState("electronics")}}>electronics</button>
+                <button onClick={()=>{setState("women's clothing")}}>women's clothing</button>
+                <button onClick={()=>{setState("men's clothing")}}>men's clothing</button>
+              </div>
+              <div className="products">
+                {prepare(type)}
+              </div>
             </div>
         </div>
         </>

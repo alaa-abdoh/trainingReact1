@@ -13,10 +13,11 @@ function Pro (props){
     return(
         <div className="product">
             <h3>{props.title}</h3>
-            <p> <span style={{color:"black", fontWeight:"bold"}}>Description :</span> {props.description}</p>
-            <p>this product includes in : <span  style={{"fontSize":"22px","color":"red"}}>{props.category}</span></p>
-            <span>the price of this product is {props.price}</span>
-            <Link to={`product/${props.id}`}>Details</Link>
+            <p> <span>category :</span> {props.category}</p>
+            <p className="description"><span>Breif Description :</span> {props.description}</p>
+            <span className="dots">...</span>
+            <p><span>the price of this product is: </span>${props.price}</p>
+            <Link to={`/pro/${props.id}`}>Details</Link>
          </div>
         
     )

@@ -8,11 +8,17 @@ function ProductDetails(){
       },[])
     return(
         <>
-            <h1>This is Details Page for product number {num.id}</h1>
-            <p>Title : {pro.title}</p>
-            <p> Price : ${pro.price}</p>
-            <p>Description : {pro.description}</p>
-            <img style={{width:"250px"}} src={pro.image}></img>
+            <div className="details" style={{padding:"40px 0"}}>
+                <div className="container">
+                    <div className="pro">
+                        <p>{pro.title}</p>
+                        <p className="price">${pro.price}</p>
+                        <p className="rate">{pro.rating.rate} *</p>
+                        <p> <span>Full Description</span> : {pro.description}</p>
+                        <img src={pro.image} alt="product image"/>
+                    </div>
+                </div>
+            </div>
         </>
     )
 }

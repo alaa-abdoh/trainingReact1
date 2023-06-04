@@ -4,7 +4,7 @@ function Introduction(){
     return(
         <>
         <div className="landing">
-            <div className="content">
+            <div className="contents">
                 <h1>Welcome in Our Shop</h1>
                 <p>You will find all what you need here</p>
                 <Link to="pro">Products Page</Link>

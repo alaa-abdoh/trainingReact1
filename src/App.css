@@ -2,6 +2,33 @@
   margin: 0;
   padding: 0;
 }
+
+.container{
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+@media (min-width:768px) {
+  .container{
+      width:750px; /*the screen minimum will be 768 ( let the screen 768), i need width of container be less than 768 to let spaces from left and right of*/
+  }
+}
+
+@media (min-width:992px) {
+  .container{
+      width:970px;
+  }
+}
+
+@media (min-width:1200px) {
+  .container{
+      width:1170px;
+  }
+}
+
+
 .header{
   background-color: rgb(0, 0, 0);
   display: flex;
@@ -18,7 +45,8 @@
   opacity: 0.8;
 }
 .content{
-  padding: 30px;
+  background-color: #eee;
+  padding: 30px 0; 
 }
 .Buttons{
   margin: 0 auto;
@@ -26,15 +54,17 @@
   margin-bottom: 40px;
 }
 button{
-  background-color: #ccc;
   border: none;
-  padding: 5px 10px;
   margin-right: 20px;
   cursor: pointer;
-  border-radius: 5px;
+  background-color: #0075ff;
+  color: white;
+  padding: 8px;
+  border-radius: 10px;
+  transition: all 0.3s;
 }
 button:hover{
-  background-color: #ddd;
+  background-color:#0075ffad ;
 }
 .products{
   display: flex;
@@ -42,26 +72,90 @@ button:hover{
   justify-content: space-between;
 }
 .product{
-  background-color: #666;
-  color: white;
+  background-color: white;
   width: 30%;
   margin-bottom: 15px;
   padding: 10px;
   border-radius: 10px;
+  position: relative;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.product p:not(.description){
+  margin-bottom: 10px;
+}
+.dots{
+  margin-bottom: 10px;
+  display: inline-block;
+  font-size: 20px;
+  font-weight: bold;
+}
+.product p.description{
+  max-height: 68px;
+  overflow-y: hidden;
+}
+.product p span{
+ 
+ font-weight:600
 }
 .product h3{
   text-align: center;
   margin: 0 0 15px;
+  
+  font-size: 18px;
 }
-.product a{
-  background-color: red;
-  padding: 5px;
-  display: block;
+.details .container .pro{
+  width: 550px;
+  margin: 0 auto;
+  border: 1px solid #0075ff;
+  border-radius: 15px;
+  padding: 30px 40px;
+  position: relative;
+}
+.details .container .pro p:first-child{
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 25px;
+}
+.details .container .pro p.price{
+  content: "";
+  position: absolute;
+  top: -30px;
+  left: -30px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: #0075ff;
   color: white;
-  width: fit-content;
-  margin: 15px auto;
-  border-radius: 8px;
-  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.details .container .pro p.rate{
+  content: "";
+  position: absolute;
+  top: -30px;
+  right: -30px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: #0075ff;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.details .container .pro p:last-of-type{
+  line-height: 1.8;
+}
+.details .container .pro p:last-of-type span{
+  font-weight: 600;
+  font-size: 18px;
+}
+.details .container .pro img{
+  width: 170px;
+  display: block;
+  margin: 20px auto;
 }
 .notFound img{
   width: 500px;
@@ -73,7 +167,8 @@ button:hover{
   text-align: center;
 }
 .notFound .text a,
-.landing .content a{
+.landing .contents a,
+.product a{
   display: inline-block;
   margin: 10px 0;
   text-decoration: none;
@@ -83,8 +178,15 @@ button:hover{
   border-radius: 10px;
   transition: all 0.3s;
 }
+.product a{
+  display: block;
+  width: fit-content;
+  margin: 0 auto;
+  
+}
 .notFound .text a:hover,
-.landing .content a:hover{
+.landing .contents a:hover,
+.product a:hover{
   background-color:#0075ffad ;
 }
 .landing{
@@ -94,23 +196,23 @@ button:hover{
   background-position: center;
   position: relative;
 }
-.landing .content{
+.landing .contents{
   position: absolute;
   top: 30%;
   left: 5%;
 }
-.landing .content h1{
+.landing .contents h1{
   color: white;
   font-size: 50px;
   margin-bottom: 20px;
 }
-.landing .content p{
+.landing .contents p{
   font-size: 20px;
   font-weight: bold;
   text-align: center;
   margin-bottom: 20px;
 }
-.landing .content a{
+.landing .contents a{
   width: fit-content;
   margin: 0 auto;
   display: block;
